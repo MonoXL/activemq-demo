@@ -1,0 +1,9 @@
+select s.sid,s.sname,c.cid,c.cname,sum(g.score) sum_score from grade g
+left join student s on s.sid = g.stu_id
+left join cource c on c.cid = g.cource_id
+group by s.sid,s.sname,c.cid,c.cname
+order by sum_score desc
+limit 0,10
+
+
+update table1 set param2 = "qqq" where param1 = "ABC"
